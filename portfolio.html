@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="sass/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Titulo de la pestaña del navegador-->
+
+    <title>WebStudio</title>
+  </head>
+
+  <!-- Encabezado de la Web apartir de aqui-->
+
+  <body>
+    <header class="header">
+      <nav class="container">
+        <div class="menu-left">
+          <div class="logo"><a href="#">WebStudio</a></div>
+          <ul class="nav">
+            <li class="nav__item">
+              <a href="index.html" class="link">Estudio</a>
+            </li>
+            <li class="nav__item">
+              <a href="portfolio.html" class="link active">Portafolio</a>
+            </li>
+            <li class="nav__item"><a href="#" class="link">Contacto</a></li>
+          </ul>
+        </div>
+        <ul class="menu-right">
+          <li class="menu-right__item">
+            <svg class="menu-right__icon--sobre" width="16" height="12">
+              <use xlink:href="./images/icons.svg#icon-sobre-menu"></use>
+            </svg>
+            <a class="contact" href="mailto:info@devstudio.com"
+              >info@devstudio.com
+            </a>
+          </li>
+          <li class="menu-right__item">
+            <svg class="menu-right__icon--movil" width="10" height="18">
+              <use xlink:href="./images/icons.svg#icon-movil"></use>
+            </svg>
+            <a class="contact" href="tel:+525555296000">+525555296000</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!--btaz= botón azul de portafolio
+	btgr= botón gris de portafolio-->
+    <main>
+      <div class="container">
+        <div class="block-button">
+          <div id="button-filter">
+            <ul class="list-button">
+              <li class="list-button__button">
+                <button class="btaz" type="button">Todo</button>
+              </li>
+              <li class="list-button__button">
+                <button class="btgr" type="button">Sitios-web</button>
+              </li>
+              <li class="list-button__button">
+                <button class="btgr" type="button">Aplicaciones</button>
+              </li>
+              <li class="list-button__button">
+                <button class="btgr" type="button">Diseño</button>
+              </li>
+              <li class="list-button__button">
+                <button class="btgr" type="button">Marketing</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!--CONTAINER PORTAFOLIO-->
+      <!--<div class="container-portfolio"> -->
+      <section class="container-briefcase">
+        <div id="briefcase">
+          <ul class="list-portfolio">
+            <li class="box">
+              <div class="box-animation">
+                <p>
+                  Tecnoduck es una plataforma de distribución de coronavirus de
+                  última generación. Las compañías usan esta plataforma para el
+                  espionaje digital y los ataques a los servidores seguros de la
+                  competencia.
+                </p>
+              </div>
+              <img
+                class="box__image"
+                src="images/tecnoduck.jpg"
+                alt="Tecnoduck Sitio Web"
+                width="370"
+                height="294"
+              />
+              <h3 class="box__title">Tecnoduck</h3>
+              <span class="box__subtitle">Sitio</span>
+            </li>
+
+            <li class="box">
+              <div class="box-animation">
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Asperiores aliquid id culpa deleniti? Magnam minima nesciunt
+                  cum.
+                </p>
+              </div>
+              <img
+                src="images/poster.jpg"
+                alt="Póster de Nueva Orleans"
+                width="370"
+                height="294"
+              />
+              <h3 class="box__title">Póster de Nueva Orleans</h3>
+              <h3 class="box__title">vs Estrella Dorada</h3>
+            </li>
+
+            <li class="box">
+              <div class="box-animation">
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Asperiores aliquid id culpa deleniti? Magnam minima nesciunt
+                  cum.
+                </p>
+              </div>
+              <img
+                src="images/restaurant.jpg"
+                alt="Restaurante Seafood"
+                width="370"
+                height="294"
+              />
+              <h3 class="box__title">Restaurante Seafood</h3>
+              <span class="box__subtitle">Aplicaciones</span>
+            </li>
+
+            <li class="box">
+              <div class="box-animation">
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Asperiores aliquid id culpa deleniti? Magnam minima nesciunt
+                  cum.
+                </p>
+              </div>
+              <img
+                src="images/project_prime.jpg"
+                alt="Proyecto Prime"
+                width="370"
+                height="294"
+              />
+              <h3 class="box__title">Proyecto Prime</h3>
+              <span class="box__subtitle">Marketing</span>
+            </li>
+
+            <li class="box">
+              <div class="box-animation">
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Asperiores aliquid id culpa deleniti? Magnam minima nesciunt
+                  cum.
+                </p>
+              </div>
+              <img
+                src="images/project_in_boxes.jpg"
+                alt="Proyecto Cajas"
+                width="370"
+                height="294"
+              />
+              <h3 class="box__title">Proyecto Cajas</h3>
+              <span class="box__subtitle">Aplicaciones</span>
+            </li>
+
+            <li class="box">
+              <div class="box-animation">
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Asperiores aliquid id culpa deleniti? Magnam minima nesciunt
+                  cum.
+                </p>
+              </div>
+              <img
+                src="images/the_inspiration.jpg"
+                alt="La inspiración no tiene limites"
+                width="370"
+                height="294"
+              />
+              <h3 class="box__title">La inspiración no tiene límites</h3>
+              <span class="box__subtitle">Sitio-web</span>
+            </li>
+
+            <li class="box">
+              <div class="box-animation">
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Asperiores aliquid id culpa deleniti? Magnam minima nesciunt
+                  cum.
+                </p>
+              </div>
+              <img
+                src="images/limited_edition.jpg"
+                alt="Edición Limitada"
+                width="370"
+                height="294"
+              />
+              <h3 class="box__title">Edición Limitada</h3>
+              <span class="box__subtitle">Diseño</span>
+            </li>
+
+            <li class="box">
+              <div class="box-animation">
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Asperiores aliquid id culpa deleniti? Magnam minima nesciunt
+                  cum.
+                </p>
+              </div>
+              <img
+                src="images/project_lab.jpg"
+                alt="Proyecto LAB"
+                width="370"
+                height="294"
+              />
+              <h3 class="box__title">Proyecto LAB</h3>
+              <span class="box__subtitle">Marketing</span>
+            </li>
+
+            <li class="box">
+              <div class="box-animation">
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Asperiores aliquid id culpa deleniti? Magnam minima nesciunt
+                  cum.
+                </p>
+              </div>
+              <img
+                src="images/growing_business.jpg"
+                alt="Negocio en Crecimiento"
+                width="370"
+                height="294"
+              />
+              <h3 class="box__title">Negocio en Crecimiento</h3>
+              <span class="box__subtitle">Aplicaciones</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="first-block">
+        <a class="logo" href="webstudio">WebStudio</a>
+        <address class="first-block__direction">
+          <p>Calz. Ticomán 500, Ciudad de México, CDMX, México</p>
+          <div class="first-block__menu-footer" id="menuf">
+            <a class="first-block__contact" href="mailto:info@example.com"
+              >info@example.com</a
+            >
+            <a class="first-block__contact" href="tel:525555296000"
+              >+525555296000</a
+            >
+          </div>
+        </address>
+      </div>
+      <div class="networks">
+        <h3 class="networks__title">ENCUENTRANOS EN</h3>
+        <ul class="networks__list">
+          <li class="social">
+            <svg class="social__icons" width="20" height="20">
+              <use xlink:href="./images/icons.svg#icon-instagram-2"></use>
+            </svg>
+          </li>
+
+          <li class="social">
+            <svg class="social__icons" width="20" height="20">
+              <use xlink:href="./images/icons.svg#icon-twitter-1"></use>
+            </svg>
+          </li>
+
+          <li class="social">
+            <svg class="social__icons" width="20" height="20">
+              <use xlink:href="./images/icons.svg#icon-facebook-1"></use>
+            </svg>
+          </li>
+
+          <li class="social">
+            <svg class="social__icons" width="20" height="20">
+              <use xlink:href="./images/icons.svg#icon-linkedin-1"></use>
+            </svg>
+          </li>
+        </ul>
+      </div>
+      <div class="subscription">
+        <h3 class="subscription__title">SUSCRIBASE AL BOLETIN INFORMATIVO</h3>
+        <form name="subscription_footer">
+          <label for="mail_footer">
+            <input
+              class="email_footer"
+              type="email"
+              name="email"
+              id="mail_footer"
+              placeholder=" Correo electrónico"
+            />
+          </label>
+          <button class="submit_footer" type="submit" name="suscribe">
+            Suscríbase
+            <svg class="icon subscription-icono" width="24" height="24">
+              <use
+                xlink:href="./images/icons.svg#icon-subscription-icono"
+              ></use>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </footer>    <script src="js/modal.js"></script>
+  </body>
+</html>

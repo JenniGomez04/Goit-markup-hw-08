@@ -16,7 +16,7 @@
     }
 
     body {
-      min-width: 481;
+
       font-family: $--tipografia-rob;
       margin: 0%;
     }
@@ -35,12 +35,14 @@
       background-color: $--color-white;
       width: 100%;
       height: 80px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      display: inline;
       border-style: solid;
       border-width: 1px;
       border-color: $--color-back-gris;
+    }
+
+    header > .container{
+      margin-left: 15px;
     }
 
     /* container para skills, services y clientes regulares*/
@@ -78,7 +80,7 @@
         border-bottom: 4px solid $--color-blue;
       }
 
-      font-size: 14px;
+      font-size: 40px;
       padding: 0 0 26px 0;
     }
 
@@ -86,12 +88,14 @@
 
     .menu-right {
       list-style: none;
-      display: flex;
+      display: block;
       align-items: center;
-      font-size: 14px;
+      font-size: 34px;
+      margin-top: 120px;
+      padding-left: 0;
 
       > li:last-child {
-        padding-left: 50px;
+        padding-left: 0px;
       }
 
       svg {
@@ -101,6 +105,10 @@
       > li svg:hover {
         fill: $--color-blue;
       }
+    }
+
+    .menu-right__item{
+      margin-bottom: 32px;
     }
 
     .menu-right__item:hover svg {
@@ -188,7 +196,7 @@
         pointer-events: none;
       }
 
-      position: absolute;
+      position: fixed;
       z-index: 1;
       display: flex;
       align-items: center;
@@ -202,6 +210,9 @@
     }
 
     .modal {
+      position: absolute;
+      top: 50%;
+      left: 50%;
       width: 528px;
       height: 581px;
       background-color: $--color-white;
@@ -623,21 +634,21 @@
     /* Footer */
 
     .footer {
-      width: 480px;
-      /*margin: 0%;
-      display: grid;
-      place-content: center;*/
+      width: 100%;
       background-color: $--color-banner-footer;
+
     }
 
+
     .first-block {
-      width: 100%;
+      margin-left: 40%;
       padding-top: 60px;
-      padding-left: 35%;
       background-color: #2F303A;
+      justify-content: space-between;
     }
 
     .first-block__direction {
+      margin-right: 0px;
       width: 231px;
       font-family: $--tipografia-rob;
       font-weight: 400;
@@ -673,7 +684,7 @@
     .networks__list {
       padding: 0%;
       list-style: none;
-      margin-left: 137px;
+      margin-left: 36%;
     }
 
     .social {
@@ -699,6 +710,7 @@
     .subscription {
       padding-top: 60px;
       margin: 0 15px;
+      text-align: center;
     }
 
     .subscription__title {
@@ -770,10 +782,10 @@
   }
 
   /*MENU HAMBURGUESA*/
-/*
-  .nav, .menu-right{
+  .menu__left-g, .menu__right-g{
     display: none;
   }
+
 
   .menu-toggle {
     min-height: 40px;
@@ -793,10 +805,14 @@
     outline: none;
   }
 
-
 .menu-toggle:hover,
 .menu-toggle:focus {
   background-color: rgba(0, 0, 0, 0.1);
+}
+
+.menu-toggle:hover > svg,
+.menu-toggle:focus > svg {
+  fill: $--color-blue;
 }
 
 .menu-container {
@@ -806,7 +822,7 @@
   width: 100vw;
   height: 100vh;
   padding: 32px;
-  background-color: #3f51b5;
+  background-color: $--color-white;
   z-index: 999;
 
   transform: translateX(100%);
@@ -821,7 +837,7 @@
   position: absolute;
   top: 16px;
   right: 16px;
-  color: #fff;
+  color: #212121;
 }
 
 .mobile-menu {
@@ -833,7 +849,8 @@
 .mobile-menu .link {
   display: block;
   padding: 10px;
-  color: #fff;
+  color: $--color-black;
   text-decoration: none;
-}*/
+  margin-bottom: 36px;
+}
   }

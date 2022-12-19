@@ -1,6 +1,8 @@
-@import 'utils/variables.scss';
+/* MOVIL */
+@media screen and (max-width: 480px) {
 
-@media screen and (min-width: 320px) and (max-width: 480px){
+  @import 'utils/variables.scss';
+
   a {
     text-decoration: none;
     color: $--color-blue;
@@ -16,7 +18,6 @@
   }
 
   body {
-    width: 480px;
     font-family: $--tipografia-rob;
     margin: 0%;
   }
@@ -34,7 +35,7 @@
   .header {
     background-color: $--color-white;
     width: 100%;
-    height: 80px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -43,12 +44,15 @@
     border-color: $--color-back-gris;
   }
 
+
+  header > .container{
+    margin-left: 15px;
+  }
+
   /* container para skills, services y clientes regulares*/
 
   .container {
-    width: 480px;
-    display: flex;
-    justify-content: space-between;
+    box-sizing: border-box;
     margin: 0 auto;
   }
 
@@ -78,7 +82,7 @@
       border-bottom: 4px solid $--color-blue;
     }
 
-    font-size: 14px;
+    font-size: 40px;
     padding: 0 0 26px 0;
   }
 
@@ -86,12 +90,14 @@
 
   .menu-right {
     list-style: none;
-    display: flex;
+    display: block;
     align-items: center;
-    font-size: 14px;
+    font-size: 34px;
+    margin-top: 120px;
+    padding-left: 0;
 
     > li:last-child {
-      padding-left: 50px;
+      padding-left: 0px;
     }
 
     svg {
@@ -106,6 +112,11 @@
   .menu-right__item:hover svg {
     fill: $--color-blue;
   }
+
+  .menu-right__item{
+      margin-bottom: 32px;
+    }
+
 
   .contact {
     color: $--color-grisc;
@@ -126,6 +137,7 @@
     width: 100%;
     background-image: url('../images/mobile/banner_mobile@1x.jpg');
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     background-color: $--color-banner-imagen;
     margin: 0 auto;
@@ -138,38 +150,29 @@
     text-align: center;
   }
 
-  .container-banner > h1{
-    color: $--color-white;
-    font-size: 26px;
-    font-weight: 900;
-    letter-spacing: 0.06em;
-    text-align: center;
-  }
-
-
-  /*
   .container-banner > h1 {
-    padding-top: 200px;
+    padding-top: 118px;
     margin: auto;
+    width: 100%;
     text-align: center;
     font-family: $--tipografia-rob;
-    font-size: 26px;
     line-height: 42px;
     letter-spacing: 0.06em;
+    font-size: 26px;
     color: $--color-white;
-  }*/
+  }
 
   .button {
+    width: auto;
     font-family: $--tipografia-rob;
     font-weight: 700;
     font-size: 16px;
-    letter-spacing: 0.06em;
-    line-height: 30px;
-    margin: 30px auto;
-    padding: 10px 32px;
     color: $--color-white;
     background: $--color-blue;
     cursor: pointer;
+    display: block;
+    margin: 10px auto;
+    padding: 10px 2px;
     border: none;
     border-radius: 4px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -196,14 +199,14 @@
     width: 100%;
     height: 100%;
     left: 0;
-    top: 0;
+    top: 123px;
     background: rgba(0, 0, 0, 0.2);
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .modal {
-    width: 528px;
-    height: 581px;
+    width: 450px;
+    height: 609px;
     background-color: $--color-white;
     border-radius: 4px;
     visibility: visible;
@@ -348,7 +351,6 @@
     text-align: center;
     font-weight: 700;
     font-size: 28px;
-    line-height: 32.81px;
     color: $--color-black;
   }
 
@@ -375,37 +377,51 @@
   /* Section skills text */
 
   .skills__title {
+    text-align: center;
     margin: 0%;
     font-family: $--tipografia-rob;
     font-weight: 700;
     font-size: 14px;
     line-height: 100%;
     color: $--color-black;
-    text-align: center;
   }
 
   .recta-skills {
-    text-align: center;
     margin-bottom: 30px;
     border-radius: 4px;
   }
 
   .recta-skills__icon{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+
+    > use {
+      width: 450px;
+    height: 120px;
+  }
+
+   &:hover {
+    border: 1px solid $--color-blue;
+  }
+
+  }
+
+  /*
+  .recta-skills__icon use{
     width: 450px;
     height: 120px;
-
-    &:hover {
-      border: 1px solid $--color-blue;
-    }
   }
+  .recta-skills__icon:hover {
+    border: 1px solid $--color-blue;
+  }*/
 
   .skills__text {
     font-family: $--tipografia-rob;
     font-size: 14px;
     line-height: 146%;
     color: $--color-grisc;
-    margin-right: 15px;
-    margin-left: 15px;
+    margin: 10px 16px 30px 20px;
   }
 
   /* SECCIÓN DE IMAGENES SERVICES DE INICIO */
@@ -415,15 +431,16 @@
   }
 
   .container-services__title {
+    display: none;
     padding-bottom: 55px;
   }
 
   #container-services {
-    display: none;
     border-style: none;
     padding: 0%;
     margin: 0%;
-    width: 100%px;
+    width: 480px;
+    display: none;
   }
 
   .function {
@@ -456,15 +473,6 @@
     }
   }
 
-  .function__image{
-    width: 370px;
-    height: 294px;
-
-    &:hover, &:active {
-      border: 1px solid $--color-blue;
-  }
-  }
-
   .function__title {
     width: 370px;
     height: 70px;
@@ -485,34 +493,38 @@
 
   .container-profile {
     background-color: $--color-back-gris;
-    width: 480px;
+    width: 100%;
   }
 
   .container-profile__title {
     padding-top: 60px;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
   }
 
   #container-profile {
-    width: 1200px;
+    width: 100%;
     display: inline;
   }
 
   .professionals {
+    padding: 0 15px 94px 15px;
+    display: flex;
+    flex-wrap: wrap;
     margin: auto;
-    padding: 0%;
-    padding-bottom: 60px;
+    padding-bottom: 94px;
+    text-align: center;
   }
 
   .professionals__profile-box {
-    display: flex;
-    width: 450px;
-    height: 622px;
-    margin: 0 auto 30px;
+    display: inline-block;
+    padding-bottom: 94px;
+    margin-bottom: 30px;
     background-color: $--color-white;
     border-radius: 0 0 4px 4px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    text-align: center;
+    width: 450px;
+    height: 622px;
+    padding: 0%;
 
     &:hover {
       border: 1px solid $--color-blue;
@@ -522,10 +534,10 @@
   .card__image{
     width: 450px;
 
-    &:hover {
+  &:hover {
     border: 1px solid $--color-blue;
-    }
   }
+}
 
   /* Title sección team */
 
@@ -537,8 +549,6 @@
     text-align: center;
     font-weight: 500;
     font-size: 16px;
-    line-height: 19px;
-    letter-spacing: 0.03em;
     color: $--color-black;
   }
 
@@ -549,11 +559,8 @@
     padding-bottom: 30px;
     font-family: $--tipografia-rob;
     text-align: center;
-    font-family: Roboto;
     font-weight: 400;
     font-size: 16px;
-    line-height: 19px;
-    letter-spacing: 0.03em;
     color: $--color-grisc;
   }
 
@@ -570,8 +577,6 @@
   }
 
   .profile-icons__icons {
-    width: 20px;
-    height: 20px;
     cursor: pointer;
     fill: $--color-logo-clientes;
 
@@ -606,10 +611,9 @@
   }
 
   .icons-client {
-    width: 170px;
-    height: 81px;
     background-color: $--color-white;
     fill: $--color-logo-clientes;
+    margin-right: 0;
     border: 1px solid $--color-logo-clientes;
     border-radius: 4px;
     cursor: pointer;
@@ -623,17 +627,17 @@
   /* Footer */
 
   .footer {
-    width: 480px;
-    /*margin: 0%;
-    display: grid;
-    place-content: center;*/
+    width: 100%;
+    height: 603px;
+    margin: 0%;
+    display: flex;
+    flex-wrap: wrap;
     background-color: $--color-banner-footer;
   }
 
   .first-block {
-    width: 100%;
     padding-top: 60px;
-    padding-left: 35%;
+    padding-left: 163px;
     background-color: #2F303A;
   }
 
@@ -662,18 +666,17 @@
   .networks__title {
     color: $--color-white;
     text-align: center;
+    font-size: 14px;
   }
 
   .networks {
-    margin-left: 0px;
-    margin: 55px 0 0 0;
+    margin: 60px 0 0 140px;
     list-style: none;
   }
 
   .networks__list {
     padding: 0%;
     list-style: none;
-    margin-left: 137px;
   }
 
   .social {
@@ -682,7 +685,7 @@
     float: left;
     margin-right: 10px;
     fill: $--color-white;
-    background-color:rgba(255, 255, 255, 0.1);;
+    background-color:rgba(255, 255, 255, 0.1);
     border-radius: 50%;
 
     &:hover, &:active {
@@ -697,19 +700,17 @@
   /*Caja suscripción en el footer*/
 
   .subscription {
-    padding-top: 60px;
-    margin: 0 15px;
+    margin: 60px 0 84px 60px;
   }
 
   .subscription__title {
-    text-align: center;
+    font-size: 14px;
     color: $--color-white;
-    margin-top: 60px;
-    margin-bottom: 16px;
+    text-align: center;
   }
 
   .email_footer {
-    min-width: 450px;
+    width: 358px;
     height: 50px;
     left: 815px;
     margin-right: 12px;
@@ -729,9 +730,10 @@
     position: relative;
     width: 200px;
     height: 50px;
+    margin-top: 20px;
+    margin-left: 90px;
     line-height: 2;
     border-radius: 4px;
-    margin: 20px 140px 60px;
     color: $--color-white;
     background-color: $--color-blue;
     box-shadow: 0px 4px 4px 0px #00000026;
@@ -753,27 +755,202 @@
   }
 
 
-/* Contenedor 1,2 y 3 de imagenes de portafolio
-clases para css de textos de imagenes*/
+  /* Portafolio
+   Active: Activa un elemento (botón y enlace) se pone la ubicación su bordo azul
+  Focus: Activa un elemento interactivo (botón y enlace) */
 
-h3 {
-  font-family: $--tipografia-rob;
-  font-weight: 700;
-  font-size: 16px;
-  color: $--color-black;
+  .btaz {
+    color: $--color-white;
+    background-color: $--color-blue;
+    border-color: $--color-white;
+    border-radius: 4px;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+
+    &:hover, &:active {
+      color: $--color-black;
+      border-color: $--color-blue;
+    }
+  }
+
+  .btgr {
+    color: $--color-black;
+    background-color: $--color-back-gris;
+    border-color: $--color-back-gris;
+    border-radius: 4px;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+
+    &:hover, &:active {
+      color: $--color-blue;
+      border-color: $--color-blue;
+    }
+  }
+
+  /* Etiquetas link*/
+
+  .link {
+    &:hover, &:active {
+      color: $--color-blue;
+    }
+  }
+
+  /* CONTAINER PORTAFOLIO */
+
+  .block-button {
+    margin: 0%;
+    width: 100%;
+  }
+
+  #button-filter {
+    width: 1200px;
+  }
+
+  .list-button {
+    display: flex;
+    justify-content: center;
+    margin: 0%;
+  }
+
+  .list-button__button {
+    padding-top: 106px;
+    padding-right: 8px;
+    padding-bottom: 50px;
+    display: block;
+  }
+
+  /* Aqui termina la lista de botones */
+
+  .container-briefcase {
+    padding: 0%;
+    margin: 0%;
+    background-color: #EEEEEE;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  #briefcase {
+    width: 1200px;
+    padding: 0%;
+    margin: 0%;
+    padding-bottom: 82px;
+  }
+
+  .list-portfolio {
+    padding: 0%;
+    display: flex;
+    margin: 0 auto;
+    flex-flow: row wrap;
+    row-gap: 30px;
+    justify-content: space-between;
+
+    li {
+      list-style: none;
+      border: 1px solid #EEE;
+    }
+  }
+
+  .box {
+    position: relative;
+    background-color: $--color-white;
+    font-style: none;
+    border-bottom-width: 2px;
+    border-bottom-style: inset;
+    border-bottom-color: #EEEEEE;
+    padding-bottom: 20px;
+
+    &:hover {
+      border: 1px solid $--color-blue;
+    }
+  }
+
+  .box__image:hover {
+    border: 1px solid $--color-blue;
+  }
+
+  .box-animation {
+    position: absolute;
+    top: 140px;
+    left: 0;
+    width: 100%;
+    height: 294px;
+    padding: 63px 24px;
+    color: $--color-white;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0.03em;
+    background: rgba(33, 150, 243, 0.9);
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .box:hover .box-animation {
+    transform: translateY(-140px);
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 1;
+    cursor: pointer;
+    visibility: visible;
+  }
+
+  .box__title {
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+
+  .box__subtitle {
+    padding-left: 20px;
+  }
+
+  /* Contenedor 1,2 y 3 de imagenes de portafolio
+  clases para css de textos de imagenes*/
+
+  h3 {
+    font-family: $--tipografia-rob;
+    font-weight: 700;
+    font-size: 18px;
+    color: $--color-black;
+  }
+
+  span {
+    font-family: $--tipografia-rob;
+    font-weight: 400;
+    font-size: 16px;
+    color: $--color-grisc;
+  }
+
+
+  /*MENU HAMBURGUESA*/
+
+  .menu__left-g, .menu__right-g{
+    display: none;
+  }
+
+
+  .menu-toggle {
+    min-height: 40px;
+    min-width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+  }
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
-span {
-  font-family: $--tipografia-rob;
-  font-weight: 400;
-  font-size: 16px;
-  color: $--color-grisc;
-}
-
-/*MENU HAMBURGUESA*/
-
-.menu-toggle {
-  display: none;
+.menu-toggle:hover > svg,
+.menu-toggle:focus > svg {
+  fill: $--color-blue;
 }
 
 .menu-container {
@@ -783,7 +960,7 @@ span {
   width: 100vw;
   height: 100vh;
   padding: 32px;
-  background-color: #3f51b5;
+  background-color: $--color-white;
   z-index: 999;
 
   transform: translateX(100%);
@@ -798,7 +975,7 @@ span {
   position: absolute;
   top: 16px;
   right: 16px;
-  color: #fff;
+  color: #212121;
 }
 
 .mobile-menu {
@@ -810,7 +987,8 @@ span {
 .mobile-menu .link {
   display: block;
   padding: 10px;
-  color: #fff;
+  color: $--color-black;
   text-decoration: none;
+  margin-bottom: 36px;
 }
 }

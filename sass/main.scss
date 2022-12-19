@@ -606,13 +606,14 @@ label .button_form {
   width: 100%;
   margin: 0%;
   display: flex;
-  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 50px;
+  padding-top: 60px;
   background-color: $--color-banner-footer;
 }
 
 .first-block {
-  padding-top: 60px;
-  padding-left: 120px;
+  padding-top: 0%;
   background-color: #2F303A;
 }
 
@@ -639,16 +640,18 @@ label .button_form {
 }
 
 .networks__title {
+  margin-top: 18px;
   color: $--color-white;
   align-content: center;
 }
 
 .networks {
-  margin: 55px 0 0 50px;
+  margin: 0px;
   list-style: none;
 }
 
 .networks__list {
+  display: flex;
   padding: 0%;
   list-style: none;
 }
@@ -674,7 +677,7 @@ label .button_form {
 /*Caja suscripción en el footer*/
 
 .subscription {
-  margin: 55px 0 84px 60px;
+  margin: 0 0 0 30px;
 }
 
 .subscription__title {
